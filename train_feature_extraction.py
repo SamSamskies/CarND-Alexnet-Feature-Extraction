@@ -28,7 +28,7 @@ train_images, validation_images, train_labels, validation_labels = \
 # TODO: Define placeholders and resize operation.
 features = tf.placeholder(tf.float32, (None, 32, 32, 3))
 resized = tf.image.resize_images(features, (227, 227))
-labels = tf.placeholder(tf.int32, None)
+labels = tf.placeholder(tf.int64, None)
 
 # TODO: pass placeholder as first argument to `AlexNet`.
 fc7 = AlexNet(resized, feature_extract=True)
